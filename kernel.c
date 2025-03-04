@@ -52,9 +52,9 @@ void *memset(void *buf, char c, size_t n)
     return buf;
 }
 
-__attribute__((section(".text.boot")));
-__attribute((naked));
-void boot(void)
+__attribute__((section(".text.boot")))
+__attribute((naked)) void
+boot(void)
 {
     __asm__ __volatile__(
         "mv sp, %[stack_top]\n"
